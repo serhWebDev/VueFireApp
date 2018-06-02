@@ -18,7 +18,7 @@ export default new Router({
       name: 'new-contact',
       component: NewContact
     },{
-      path: '/:contact_id',
+      path: '/:employee_id',
       name: 'view-contact',
       component: ViewContact
     },{
