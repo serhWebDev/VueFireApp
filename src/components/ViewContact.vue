@@ -17,7 +17,7 @@
             </div>
         </div>
         <router-link to="/" class="btn grey">Back</router-link>
-        <button @click="deleteEmploye" class="btn red">Deleate</button>
+        <button @click="deleteContact" class="btn red">Deleate</button>
     </div>
 </template>
 
@@ -64,7 +64,7 @@
                     })
                 })
             },
-            deleteEmploye (){
+            deleteContact (){
                 if (confirm('Are you sure?')) {
                     db.collection('employees').where('employee_id', '==', this.$route.params.employee_id).get()
                         .then(querySnapshot => {
