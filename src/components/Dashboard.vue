@@ -3,7 +3,7 @@
         <ul class="collection with-header">
             <li class="collection-header"><h4>Empoyees</h4></li>
             <li v-for="employee in employees" v-bind:key="employee.id" class="collection-item avatar">
-                <img src="../assets/logo2.png" alt="" class="circle">
+                <img v-bind:src="employee.logo"  alt="" class="circle">
                 <span class="title"><b style="color: red">{{employee.name}}</b></span>
                 <p><b>Department: </b>{{employee.dept}}<br>
                     <b>Position: </b>{{employee.position}}
@@ -13,16 +13,11 @@
                 </router-link>
             </li>
         </ul>
-        <div class="fixed-action-btn">
-            <router-link to="/new" class="btn-floating btn-large red">
-                <i class="fas fa-plus"></i>
-            </router-link>
-        </div>
     </div>
 </template>
 
 <script>
-    import db from './firebaseInit'
+    import db from './firebaseInit';
     export default {
         name: "dashboard",
         data () {
@@ -41,7 +36,7 @@
                         'logo': doc.data().logo,
                         'dept': doc.data().dept,
                         'position': doc.data().position
-                    }
+                    };
                     this.employees.push(data)
                 })
             })
