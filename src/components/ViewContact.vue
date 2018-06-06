@@ -18,6 +18,11 @@
         </div>
         <router-link to="/" class="btn grey">Back</router-link>
         <button @click="deleteContact" class="btn red">Deleate</button>
+        <div class="fixed-action-btn">
+            <router-link v-bind:to="{name: 'edit-contact', params: {employee_id: employee_id}}" class="btn-floating btn-large red">
+                <i class="fa fa-pencil-alt"></i>
+            </router-link>
+        </div>
     </div>
 </template>
 

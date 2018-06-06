@@ -15,7 +15,7 @@
         </ul>
         <div class="fixed-action-btn">
             <router-link to="/new" class="btn-floating btn-large red">
-                <i href="" class="fa fa-plus"></i>
+                <i class="fa fa-plus"></i>
             </router-link>
         </div>
     </div>
