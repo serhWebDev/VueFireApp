@@ -1,7 +1,7 @@
 <template>
     <div id="dashboard">
         <ul class="collection with-header">
-            <li class="collection-header"><h4>Empoyees</h4></li>
+            <li class="collection-header"><h4>List</h4></li>
             <li v-for="employee in employees" v-bind:key="employee.id" class="collection-item avatar">
                 <img v-bind:src="employee.logo"  alt="" class="circle">
                 <span class="title"><b style="color: red">{{employee.name}}</b></span>

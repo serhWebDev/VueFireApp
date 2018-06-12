@@ -7,7 +7,7 @@
                         <img v-bind:src="logo" alt="" class="circle responsive-img">
                     </div>
                     <div class="col s10">
-                        <span class="title"><h1><b style="color: red">{{name}}</b></h1></span>
+                        <span class="title"><h4><b style="color: red">{{name}}</b></h4></span>
                         <h5><b>Department: </b>{{dept}}<br>
                             <b>Position: </b>{{position}}
                         </h5>
@@ -64,7 +64,7 @@
                         this.employee_id = doc.data().employee_id;
                         this.name = doc.data().name;
                         this.dept = doc.data().dept;
-                        this.position = doc.data().position,
+                        this.position = doc.data().position;
                         this.text = doc.data().text
                     })
                 })
